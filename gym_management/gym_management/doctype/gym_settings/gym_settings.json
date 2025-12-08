@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2025-12-08 15:01:11.379543",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lockers",
+  "gym_open_time",
+  "gym_close_time",
+  "week_summary_sender"
+ ],
+ "fields": [
+  {
+   "fieldname": "lockers",
+   "fieldtype": "Data",
+   "label": "Lockers"
+  },
+  {
+   "fieldname": "gym_open_time",
+   "fieldtype": "Time",
+   "label": "Gym Open Time"
+  },
+  {
+   "fieldname": "gym_close_time",
+   "fieldtype": "Time",
+   "label": "Gym Close Time"
+  },
+  {
+   "fieldname": "week_summary_sender",
+   "fieldtype": "Data",
+   "label": "Week Summary Sender"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-12-08 18:06:08.929600",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Settings",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
