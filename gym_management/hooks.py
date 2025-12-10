@@ -241,4 +241,14 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+# scheduler_events = {
+#     "all": [
+#         "gym_management.gym_management.doctype.gym_membership.gym_membership.auto_expire_memberships"
+#     ]
+# }
 
+doc_events = {
+    "Gym Membership": {
+        "after_insert": "gym_management.gym_membership.after_insert"
+    }
+}

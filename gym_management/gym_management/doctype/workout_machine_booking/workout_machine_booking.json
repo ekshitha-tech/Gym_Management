@@ -1,55 +1,62 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
- "creation": "2025-12-08 15:01:40.657327",
+ "creation": "2025-12-09 11:47:03.934069",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "gym_member",
-  "background_image",
-  "qr_code",
-  "naming_series",
-  "gym_membership"
+  "workout_machine",
+  "date",
+  "duration",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "gym_member",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Gym Member",
    "options": "Gym Member"
   },
   {
-   "fieldname": "background_image",
-   "fieldtype": "Attach Image",
-   "label": "Background Image"
-  },
-  {
-   "fieldname": "qr_code",
-   "fieldtype": "Attach Image",
-   "label": "QR Code"
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Naming Series",
-   "options": "GMC.-.##"
-  },
-  {
-   "fieldname": "gym_membership",
+   "fieldname": "workout_machine",
    "fieldtype": "Link",
-   "label": "Gym Membership",
-   "options": "Gym Membership"
+   "in_list_view": 1,
+   "label": "Workout Machine",
+   "options": "Workout Machine"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "in_list_view": 1,
+   "label": "Duration"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Workout Machine Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-12-10 11:36:42.001385",
+ "modified": "2025-12-09 12:13:34.291051",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Membership Card",
- "naming_rule": "By \"Naming Series\" field",
+ "name": "Workout Machine Booking",
  "owner": "Administrator",
  "permissions": [
   {
@@ -69,6 +76,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "gym_member"
+ "states": []
 }

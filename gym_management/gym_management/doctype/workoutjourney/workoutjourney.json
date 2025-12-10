@@ -2,15 +2,15 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2025-12-08 15:01:40.657327",
+ "creation": "2025-12-09 12:20:11.428767",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "gym_member",
-  "background_image",
-  "qr_code",
-  "naming_series",
-  "gym_membership"
+  "weight",
+  "calories",
+  "date",
+  "naming_series"
  ],
  "fields": [
   {
@@ -20,36 +20,34 @@
    "options": "Gym Member"
   },
   {
-   "fieldname": "background_image",
-   "fieldtype": "Attach Image",
-   "label": "Background Image"
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
   },
   {
-   "fieldname": "qr_code",
-   "fieldtype": "Attach Image",
-   "label": "QR Code"
+   "fieldname": "calories",
+   "fieldtype": "Data",
+   "label": "Calories"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
-   "options": "GMC.-.##"
-  },
-  {
-   "fieldname": "gym_membership",
-   "fieldtype": "Link",
-   "label": "Gym Membership",
-   "options": "Gym Membership"
+   "options": "WJ.-.###"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-10 11:36:42.001385",
+ "modified": "2025-12-09 14:24:09.903898",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Membership Card",
- "naming_rule": "By \"Naming Series\" field",
+ "name": "WorkoutJourney",
  "owner": "Administrator",
  "permissions": [
   {
@@ -69,6 +67,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "gym_member"
+ "states": []
 }

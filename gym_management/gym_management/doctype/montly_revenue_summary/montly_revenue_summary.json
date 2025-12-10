@@ -2,53 +2,39 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2025-12-08 15:01:40.657327",
+ "creation": "2025-12-09 16:01:32.823240",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "gym_member",
-  "background_image",
-  "qr_code",
-  "naming_series",
-  "gym_membership"
+  "month",
+  "total_revenue",
+  "naming_series"
  ],
  "fields": [
   {
-   "fieldname": "gym_member",
-   "fieldtype": "Link",
-   "label": "Gym Member",
-   "options": "Gym Member"
+   "fieldname": "month",
+   "fieldtype": "Date",
+   "label": "Month"
   },
   {
-   "fieldname": "background_image",
-   "fieldtype": "Attach Image",
-   "label": "Background Image"
-  },
-  {
-   "fieldname": "qr_code",
-   "fieldtype": "Attach Image",
-   "label": "QR Code"
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Revenue"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
-   "options": "GMC.-.##"
-  },
-  {
-   "fieldname": "gym_membership",
-   "fieldtype": "Link",
-   "label": "Gym Membership",
-   "options": "Gym Membership"
+   "options": "MSR.-.##"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-10 11:36:42.001385",
+ "modified": "2025-12-09 16:02:45.376010",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Membership Card",
+ "name": "Montly Revenue Summary",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
@@ -69,6 +55,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "gym_member"
+ "states": []
 }

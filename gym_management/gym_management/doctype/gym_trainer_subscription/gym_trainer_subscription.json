@@ -8,10 +8,11 @@
  "field_order": [
   "gym_member",
   "gym_trainer",
-  "start_date",
-  "end_date",
-  "note",
-  "naming_series"
+  "subscription_date",
+  "contact_info",
+  "naming_series",
+  "membership_plan",
+  "plan_type"
  ],
  "fields": [
   {
@@ -27,34 +28,42 @@
    "options": "Gym Trainer"
   },
   {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start Date"
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "label": "End Date"
-  },
-  {
-   "fieldname": "note",
-   "fieldtype": "Small Text",
-   "label": "Note"
-  },
-  {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
    "options": "GTS.-.####"
+  },
+  {
+   "fieldname": "subscription_date",
+   "fieldtype": "Date",
+   "label": "Subscription Date"
+  },
+  {
+   "fieldname": "contact_info",
+   "fieldtype": "Data",
+   "label": "Contact Info"
+  },
+  {
+   "fieldname": "membership_plan",
+   "fieldtype": "Link",
+   "label": "Membership Plan",
+   "options": "Gym Membership"
+  },
+  {
+   "fetch_from": "membership_plan.plan_type",
+   "fieldname": "plan_type",
+   "fieldtype": "Data",
+   "label": "Plan type"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-08 18:07:11.647724",
+ "modified": "2025-12-10 16:24:58.985921",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Trainer Subscription",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -74,5 +83,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "subscription_date"
 }

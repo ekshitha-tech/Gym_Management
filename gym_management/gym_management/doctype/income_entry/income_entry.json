@@ -2,54 +2,39 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2025-12-08 15:00:09.566278",
+ "creation": "2025-12-09 12:26:53.856695",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "plan_name",
-  "levels",
-  "description",
-  "gym_workout_plan",
+  "amount",
+  "date",
   "naming_series"
  ],
  "fields": [
   {
-   "fieldname": "plan_name",
-   "fieldtype": "Data",
-   "label": "Plan Name"
+   "fieldname": "amount",
+   "fieldtype": "Int",
+   "label": "Amount"
   },
   {
-   "fieldname": "levels",
-   "fieldtype": "Select",
-   "label": "Levels",
-   "options": "Beginner\nIntermediate\nAdvanced"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
-  },
-  {
-   "fieldname": "gym_workout_plan",
-   "fieldtype": "Table",
-   "label": "Gym workout Plan Exercise",
-   "options": "Gym Workout Plan Exercise"
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
-   "options": "GWP.-.###"
+   "options": "IE.-.##"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-09 12:04:56.836178",
+ "modified": "2025-12-09 15:43:21.041460",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Workout Plan",
- "naming_rule": "By \"Naming Series\" field",
+ "name": "Income Entry",
  "owner": "Administrator",
  "permissions": [
   {
@@ -69,6 +54,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "plan_name"
+ "states": []
 }

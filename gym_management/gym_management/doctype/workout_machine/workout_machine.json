@@ -2,54 +2,54 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2025-12-08 15:01:40.657327",
+ "creation": "2025-12-09 11:39:18.665937",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "gym_member",
-  "background_image",
-  "qr_code",
-  "naming_series",
-  "gym_membership"
+  "machine_name",
+  "machine_type",
+  "status",
+  "availability",
+  "naming_series"
  ],
  "fields": [
   {
-   "fieldname": "gym_member",
-   "fieldtype": "Link",
-   "label": "Gym Member",
-   "options": "Gym Member"
+   "fieldname": "machine_name",
+   "fieldtype": "Data",
+   "label": "Machine Name"
   },
   {
-   "fieldname": "background_image",
-   "fieldtype": "Attach Image",
-   "label": "Background Image"
+   "fieldname": "machine_type",
+   "fieldtype": "Select",
+   "label": "Machine Type",
+   "options": "Rowing Machine\nStar Climber\nStep Machine\nSpin Bike"
   },
   {
-   "fieldname": "qr_code",
-   "fieldtype": "Attach Image",
-   "label": "QR Code"
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Working\nNot Working"
+  },
+  {
+   "default": "0",
+   "fieldname": "availability",
+   "fieldtype": "Check",
+   "label": "Availability"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
-   "options": "GMC.-.##"
-  },
-  {
-   "fieldname": "gym_membership",
-   "fieldtype": "Link",
-   "label": "Gym Membership",
-   "options": "Gym Membership"
+   "options": "WM.-.###"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-10 11:36:42.001385",
+ "modified": "2025-12-09 11:46:35.711187",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Membership Card",
- "naming_rule": "By \"Naming Series\" field",
+ "name": "Workout Machine",
  "owner": "Administrator",
  "permissions": [
   {
@@ -69,6 +69,5 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "gym_member"
+ "states": []
 }

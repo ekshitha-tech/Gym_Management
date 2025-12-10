@@ -6,3 +6,9 @@
 
 // 	},
 // });
+frappe.realtime.on('new_subscription_alert', (data) => {
+    frappe.show_alert({
+        message: `<a href="/app/gym-membership/${data.docname}" target="_blank">${data.message}</a>`,
+        indicator: 'green'
+    });
+});

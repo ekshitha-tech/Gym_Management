@@ -6,7 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1",
+  "first_name",
+  "last_name",
   "age",
   "gender",
   "phone",
@@ -16,14 +17,10 @@
   "trainer",
   "gym_member_photo",
   "status",
-  "naming_series"
+  "naming_series",
+  "date_of_birth"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
   {
    "fieldname": "age",
    "fieldtype": "Data",
@@ -78,12 +75,27 @@
    "fieldtype": "Select",
    "label": "Naming Series",
    "options": "GM.-.##"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": " First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-08 18:05:29.810482",
+ "modified": "2025-12-09 12:00:40.796931",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",
@@ -107,5 +119,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "first_name"
 }
