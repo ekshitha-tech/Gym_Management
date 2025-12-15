@@ -2,24 +2,26 @@
 # For license information, please see license.txt
 
 import frappe
+# from frappe.model.document import Document
+
+# class GymWorkoutPlan(Document):
+#     pass
+# gym_management/gym_management/doctype/gym_workout_plan/gym_workout_plan.py
+
 from frappe.model.document import Document
 
 class GymWorkoutPlan(Document):
-    pass
-import frappe
-
-def get_context(context):
-    plan_route = frappe.form_dict.get("plan")
-
-    if plan_route:
-        context.plan = frappe.get_doc(
-            "Gym Workout Plan",
-            {"route": plan_route, "publish": 1}
-        )
-
-    context.plans = frappe.get_all(
-        "Gym Workout Plan",
-        filters={"publish": 1},
-        fields=["plan_name", "level", "description", "route"]
-    )
-
+    def get_page_info(self):
+        return {
+            "title": self.plan_name,
+            "name": self.name,
+            "description": self.description,
+            "children": [
+                {
+                    "exercise": row.exercise_name,
+                    "reps": row.reps,
+                    "sets": row.sets
+                }
+                for row in self.gym_workout_plan  # Replace `exercises` with your child table fieldname
+            ]
+        }
