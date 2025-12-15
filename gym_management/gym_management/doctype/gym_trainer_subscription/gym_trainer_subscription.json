@@ -7,12 +7,15 @@
  "engine": "InnoDB",
  "field_order": [
   "gym_member",
-  "gym_trainer",
-  "subscription_date",
+  "trainer",
+  "start_date",
   "contact_info",
   "naming_series",
   "membership_plan",
-  "plan_type"
+  "plan_type",
+  "end_date",
+  "status",
+  "trainer_user"
  ],
  "fields": [
   {
@@ -22,21 +25,10 @@
    "options": "Gym Member"
   },
   {
-   "fieldname": "gym_trainer",
-   "fieldtype": "Link",
-   "label": "Gym Trainer",
-   "options": "Gym Trainer"
-  },
-  {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "label": "Naming Series",
    "options": "GTS.-.####"
-  },
-  {
-   "fieldname": "subscription_date",
-   "fieldtype": "Date",
-   "label": "Subscription Date"
   },
   {
    "fieldname": "contact_info",
@@ -54,12 +46,41 @@
    "fieldname": "plan_type",
    "fieldtype": "Data",
    "label": "Plan type"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Gym Trainer",
+   "options": "Gym Trainer"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive"
+  },
+  {
+   "fetch_from": "trainer.trainer_user",
+   "fieldname": "trainer_user",
+   "fieldtype": "Link",
+   "label": "Trainer User",
+   "options": "User"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-10 16:24:58.985921",
+ "modified": "2025-12-12 13:45:22.684689",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Trainer Subscription",
@@ -84,5 +105,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "subscription_date"
+ "title_field": "start_date"
 }

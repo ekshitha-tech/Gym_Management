@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2025-12-08 15:00:09.566278",
@@ -10,7 +11,10 @@
   "levels",
   "description",
   "gym_workout_plan",
-  "naming_series"
+  "naming_series",
+  "level",
+  "publish",
+  "route"
  ],
  "fields": [
   {
@@ -40,12 +44,30 @@
    "fieldtype": "Select",
    "label": "Naming Series",
    "options": "GWP.-.###"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "label": "Level",
+   "options": "Intermediate\nBeginner\nAdvanced"
+  },
+  {
+   "default": "0",
+   "fieldname": "publish",
+   "fieldtype": "Check",
+   "label": "Publish "
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_published_field": "publish",
  "links": [],
- "modified": "2025-12-09 12:04:56.836178",
+ "modified": "2025-12-13 09:31:28.589339",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Workout Plan",
@@ -65,6 +87,7 @@
    "write": 1
   }
  ],
+ "route": "workout-plan",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

@@ -9,6 +9,7 @@
   "section_break_tpwx",
   "amended_from",
   "gym_member",
+  "trainer",
   "plan_name",
   "plan_type",
   "start_date",
@@ -78,13 +79,19 @@
    "fieldtype": "Select",
    "label": "Naming Series",
    "options": "GMS.-.###\nGMBS.-.###"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Gym Trainer",
+   "options": "Gym Trainer"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-12-10 16:26:33.428386",
+ "modified": "2025-12-12 11:05:18.947298",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",

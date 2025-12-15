@@ -46,18 +46,4 @@ def auto_expire_memberships():
 
 
 
-import frappe
-
-def after_insert(doc, method):
-    """Send real-time alert to assigned trainer when a member subscribes"""
-    if doc.trainer:  # Make sure a trainer is assigned
-        message = f"New Subscription!\nMember: {doc.member_name}\nPlan: {doc.plan_name}\nStart Date: {doc.start_date}\nContact: {doc.member_contact}"
-
-        frappe.publish_realtime(
-            event='new_subscription_alert',
-            message=message,
-            user=doc.trainer,  # Only assigned trainer receives it
-            doctype=doc.doctype,
-            docname=doc.name
-        )
 

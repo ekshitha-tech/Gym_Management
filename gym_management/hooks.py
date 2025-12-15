@@ -247,8 +247,16 @@ app_license = "mit"
 #     ]
 # }
 
+
+
+
+# app_include_js = ["public/js/trainer_alert.js"]
+
+
+
+
 doc_events = {
-    "Gym Membership": {
-        "after_insert": "gym_management.gym_membership.after_insert"
+    "Gym Trainer Subscription": {
+        "after_insert": "gym_management.gym_management.doctype.gym_trainer_subscription.gym_trainer_subscription.after_insert"
     }
 }
