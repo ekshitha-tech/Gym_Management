@@ -9,7 +9,7 @@ from frappe.utils import today
 class GymMembership(Document):
 	pass
 
-
+@frappe.whitelist()
 def auto_expire_memberships():
 
     memberships = frappe.get_all(

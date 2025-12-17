@@ -242,15 +242,12 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 # scheduler_events = {
-#     "all": [
-#         "gym_management.gym_management.doctype.gym_membership.gym_membership.auto_expire_memberships"
-#     ]
+  
 # }
 
 
 
 
-# app_include_js = ["public/js/trainer_alert.js"]
 
 
 
@@ -258,29 +255,18 @@ app_license = "mit"
 doc_events = {
     "Gym Trainer Subscription": {
         "after_insert": "gym_management.gym_management.doctype.gym_trainer_subscription.gym_trainer_subscription.after_insert"
+    },
+      "Workout Machine": {
+        "before_save": "gym_management.gym_management.doctype.workout_machine.workout_machine.before_save"
     }
 }
 
 
 # scheduler_events = {
-#     "cron": {
-#         "0 8 15 12 *": [  # Today at 8 AM
-#             "gym_management.gym_management.gym_class_booking.weekly_class_booking_summary"
-#         ]
-#     }
+#     "all": [
+#         "gym_management.gym_management.doctype.gym_class_booking.gym_class_booking.weekly_class_booking_summary",
+#         "gym_management.gym_management.doctype.gym_membership.gym_membership.auto_expire_memberships"
+#     ]
 # }
-scheduler_events = {
-    "Montly": [
-        "gym_management.gym_management.doctype.gym_class_booking.gym_class_booking.weekly_class_booking_summary"
-    ]
-}
 
 
-doctype_js = {
-    "Gym Member": "public/js/gym_member.js"
-}
-doc_events = {
-    "Workout Machine": {
-        "before_save": "gym_management.gym_management.doctype.workout_machine.workout_machine.before_save"
-    }
-}

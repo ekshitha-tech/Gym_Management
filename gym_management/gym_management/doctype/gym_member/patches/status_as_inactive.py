@@ -1,8 +1,12 @@
-
 import frappe
 
 def execute():
-	"""Set default status as Inactive for existing Gym Member records"""
+    """Set default status as Inactive for existing Gym Member records"""
 
-	# Write your patch here.
-	pass
+    frappe.db.sql("""
+        UPDATE `tabGym Member`
+        SET status = 'Inactive'
+        WHERE status IS NULL OR status = ''
+    """)
+
+    frappe.db.commit()
