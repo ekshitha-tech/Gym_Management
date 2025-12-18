@@ -1,0 +1,95 @@
+<style>
+    .plans-wrapper {
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .plans-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .plan-card {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .plan-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .plan-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #222;
+    }
+
+    .plan-level {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .plan-desc {
+        font-size: 14px;
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .plan-link {
+        align-self: flex-start;
+        padding: 8px 14px;
+        background: #2563eb;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .plan-link:hover {
+        background: #1e4ed8;
+    }
+
+    .no-plans {
+        text-align: center;
+        color: #777;
+        margin-top: 30px;
+    }
+</style>
+{% set plans = frappe.get_all(
+    "Gym Workout Plan",
+    fields=["name", "plan_name", "levels", "description", "route"],
+    filters={"is_published": 1}
+) %}
+
+{% set first_plan = plans[0] if plans else None %}
+
+<div class="plans-wrapper">
+    <h2 style="text-align:center; margin-bottom:25px;">Available Workout Plans</h2>
+
+    {% if first_plan %}
+        <div class="plans-grid">
+            <div class="plan-card">
+                <div>
+                    <div class="plan-title">{{ first_plan.plan_name }}</div>
+                    <div class="plan-level"><strong>Level:</strong> {{ first_plan.levels }}</div>
+                    <div class="plan-desc">{{ first_plan.description }}</div>
+                    <a class="plan-link" href="/{{ first_plan.route }}">View Details</a>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <p class="no-plans">No workout plans published.</p>
+    {% endif %}
+</div>
