@@ -241,4 +241,32 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+# scheduler_events = {
+  
+# }
+
+
+
+
+
+
+
+
+doc_events = {
+    "Gym Trainer Subscription": {
+        "after_insert": "gym_management.gym_management.doctype.gym_trainer_subscription.gym_trainer_subscription.after_insert"
+    },
+      "Workout Machine": {
+        "before_save": "gym_management.gym_management.doctype.workout_machine.workout_machine.before_save"
+    }
+}
+
+
+# scheduler_events = {
+#     "all": [
+#         "gym_management.gym_management.doctype.gym_class_booking.gym_class_booking.weekly_class_booking_summary",
+#         "gym_management.gym_management.doctype.gym_membership.gym_membership.auto_expire_memberships"
+#     ]
+# }
+
 

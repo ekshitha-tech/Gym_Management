@@ -1,0 +1,95 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"qQ13vJnKwu\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"nWKVP01FlA\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Gym Classes\",\"col\":4}},{\"id\":\"llKpl_D1Gs\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Gym Members\",\"col\":4}},{\"id\":\"Io9el1vskr\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Gym Trainers\",\"col\":4}},{\"id\":\"fGCvuoPy-Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Member\",\"col\":3}},{\"id\":\"uE30ZjRly4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Workout Plan\",\"col\":3}},{\"id\":\"CuxDQ67okN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Locker Booking\",\"col\":3}},{\"id\":\"POws3IsgiM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Class Booking\",\"col\":3}},{\"id\":\"jEkq8xPnhh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Trainer\",\"col\":3}},{\"id\":\"NHIjBOiZeU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership\",\"col\":3}}]",
+ "creation": "2025-12-10 11:24:28.564207",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Gym Management",
+ "links": [],
+ "modified": "2025-12-17 09:27:31.670617",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Management",
+ "number_cards": [
+  {
+   "label": "Total Gym Classes",
+   "number_card_name": "Total Gym Classes"
+  },
+  {
+   "label": "Total Gym Members",
+   "number_card_name": "Total Gym Members"
+  },
+  {
+   "label": "Total Gym Trainers",
+   "number_card_name": "Total Gym Trainers"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Gym Admin"
+  }
+ ],
+ "sequence_id": 6.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gym Member",
+   "link_to": "Gym Member",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gym Workout Plan",
+   "link_to": "Gym Workout Plan",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gym Locker Booking",
+   "link_to": "Gym Locker Booking",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gym Class Booking",
+   "link_to": "Gym Class Booking",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gym Trainer",
+   "link_to": "Gym Trainer",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gym Membership",
+   "link_to": "Gym Membership",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Gym Management"
+}

@@ -1,16 +1,24 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "naming_series:naming_series",
  "creation": "2025-12-08 15:00:09.566278",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "plan_name",
   "levels",
   "description",
+  "weight",
+  "calories",
+  "workout_date",
   "gym_workout_plan",
-  "naming_series"
+  "naming_series",
+  "is_published",
+  "route",
+  "gym_member"
  ],
  "fields": [
   {
@@ -40,15 +48,50 @@
    "fieldtype": "Select",
    "label": "Naming Series",
    "options": "GWP.-.###"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "calories",
+   "fieldtype": "Data",
+   "label": "Calories"
+  },
+  {
+   "fieldname": "workout_date",
+   "fieldtype": "Date",
+   "label": "Workout Date"
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member"
   }
  ],
+ "force_re_route_to_default_view": 1,
  "grid_page_length": 50,
- "index_web_pages_for_search": 1,
+ "has_web_view": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2025-12-08 18:06:26.979532",
+ "modified": "2025-12-17 13:43:21.116425",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Workout Plan",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -64,6 +107,7 @@
    "write": 1
   }
  ],
+ "route": "workout_plans",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

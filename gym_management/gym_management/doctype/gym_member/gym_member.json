@@ -1,29 +1,27 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2025-12-08 14:53:02.616976",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1",
+  "first_name",
+  "last_name",
   "age",
   "gender",
   "phone",
   "email",
   "join_date",
-  "active_membership",
-  "trainer",
   "gym_member_photo",
   "status",
-  "naming_series"
+  "naming_series",
+  "date_of_birth",
+  "is_published",
+  "route"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
   {
    "fieldname": "age",
    "fieldtype": "Data",
@@ -51,18 +49,6 @@
    "label": "Join Date"
   },
   {
-   "fieldname": "active_membership",
-   "fieldtype": "Link",
-   "label": "Active Membership",
-   "options": "Gym Membership"
-  },
-  {
-   "fieldname": "trainer",
-   "fieldtype": "Link",
-   "label": "Trainer",
-   "options": "Gym Trainer"
-  },
-  {
    "fieldname": "gym_member_photo",
    "fieldtype": "Attach Image",
    "label": "Gym Member Photo"
@@ -78,12 +64,40 @@
    "fieldtype": "Select",
    "label": "Naming Series",
    "options": "GM.-.##"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": " First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
  "grid_page_length": 50,
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2025-12-08 18:05:29.810482",
+ "modified": "2025-12-17 08:38:32.689737",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",
@@ -103,9 +117,11 @@
    "write": 1
   }
  ],
+ "route": "members",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "first_name"
 }

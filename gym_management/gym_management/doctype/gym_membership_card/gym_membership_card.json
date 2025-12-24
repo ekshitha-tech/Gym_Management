@@ -9,7 +9,8 @@
   "gym_member",
   "background_image",
   "qr_code",
-  "naming_series"
+  "naming_series",
+  "gym_membership"
  ],
  "fields": [
   {
@@ -33,12 +34,18 @@
    "fieldtype": "Select",
    "label": "Naming Series",
    "options": "GMC.-.##"
+  },
+  {
+   "fieldname": "gym_membership",
+   "fieldtype": "Link",
+   "label": "Gym Membership",
+   "options": "Gym Membership"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-08 18:05:58.393580",
+ "modified": "2025-12-16 17:21:40.884414",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership Card",
@@ -62,5 +69,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "gym_member"
 }
